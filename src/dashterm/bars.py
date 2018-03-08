@@ -9,15 +9,18 @@ import math
 import time
 import sys
 
+
 def wv(x, s=2):
-    return lambda: 50 + 50* math.sin(math.pi * (s*time.time()+x) / 5)
+    return lambda: 50 + 50 * math.sin(math.pi * (s*time.time()+x) / 5)
+
 
 def wvc(x, s=2):
-    return lambda: 100 - (50 + 50*math.sin(math.pi * (s*time.time()+x) / 5)
-)
+    return lambda: 100 - (50 + 50*math.sin(math.pi * (s*time.time()+x) / 5))
+
 
 def fn():
-    return randint(0,40)
+    return randint(0, 40)
+
 
 def ui(screen):
     scenes = []
@@ -33,8 +36,8 @@ def ui(screen):
                            labels=True,
                            intervals=25.0,
                            border=False,
-                           bg=[1,2],
-                           colour=[1,2],
+                           bg=[1, 2],
+                           colour=[1, 2],
                            axes=BarChart.X_AXIS),
                   x=1, y=7, transparent=False, speed=1),
             Print(screen,
@@ -53,7 +56,6 @@ def ui(screen):
 
     scenes.append(Scene(effects, -1))
     screen.play(scenes, stop_on_resize=True)
-
 
 
 if __name__ == "__main__":

@@ -1,0 +1,34 @@
+{
+  "/home/jader/Projects/git/optionsGame/lib/__init__.py": [
+    1519745273.6075845,
+    []
+  ],
+  "/home/jader/Projects/git/optionsGame/setup.py": [
+    1520524798.9538171,
+    []
+  ],
+  "/home/jader/Projects/git/optionsGame/src/dashterm/__init__.py": [
+    1519745273.6075845,
+    []
+  ],
+  "/home/jader/Projects/git/optionsGame/src/dashterm/bars.py": [
+    1520524098.4817986,
+    []
+  ],
+  "/home/jader/Projects/git/optionsGame/src/optgame/__init__.py": [
+    1520520495.8017042,
+    []
+  ],
+  "/home/jader/Projects/git/optionsGame/src/optgame/memory.py": [
+    1520523987.0817957,
+    []
+  ],
+  "/home/jader/Projects/git/optionsGame/tests/__init__.py": [
+    1519745273.6075845,
+    []
+  ],
+  "/home/jader/Projects/git/optionsGame/tests/memory_test.py": [
+    1520526306.9378567,
+    []
+  ]
+}

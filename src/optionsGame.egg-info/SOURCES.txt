@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+src/dashterm/__init__.py
+src/dashterm/bars.py
+src/optgame/__init__.py
+src/optgame/memory.py
+src/optionsGame.egg-info/PKG-INFO
+src/optionsGame.egg-info/SOURCES.txt
+src/optionsGame.egg-info/dependency_links.txt
+src/optionsGame.egg-info/requires.txt
+src/optionsGame.egg-info/top_level.txt
