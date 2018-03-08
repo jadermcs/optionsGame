@@ -42,9 +42,16 @@ with&nbsp;old&nbsp;experiences&nbsp;and&nbsp;returns&nbsp;in&nbsp;the&nbsp;form&
 :max_memory:&nbsp;The&nbsp;size&nbsp;of&nbsp;the&nbsp;memory&nbsp;container&nbsp;to&nbsp;avoid&nbsp;overflows.<br>
 :discount:&nbsp;The&nbsp;penalty&nbsp;factor&nbsp;for&nbsp;future&nbsp;experiences.</tt></dd></dl>
 
-<dl><dt><a name="Replay-get_batch"><strong>get_batch</strong></a>(self, model, batch_size<font color="#909090">=10</font>)</dt></dl>
+<dl><dt><a name="Replay-get_batch"><strong>get_batch</strong></a>(self, model, batch_size<font color="#909090">=32</font>)</dt><dd><tt>Interact&nbsp;to&nbsp;get&nbsp;the&nbsp;training&nbsp;data.<br>
+&nbsp;<br>
+:model:&nbsp;The&nbsp;NN&nbsp;to&nbsp;be&nbsp;trained.<br>
+:batch_size:&nbsp;Size&nbsp;of&nbsp;each&nbsp;training&nbsp;sample.<br>
+:returns:&nbsp;Training&nbsp;sample.</tt></dd></dl>
 
-<dl><dt><a name="Replay-remember"><strong>remember</strong></a>(self, states, game_over)</dt></dl>
+<dl><dt><a name="Replay-remember"><strong>remember</strong></a>(self, states, game_over)</dt><dd><tt>Method&nbsp;to&nbsp;store&nbsp;the&nbsp;experiences&nbsp;in&nbsp;the&nbsp;class&nbsp;list.<br>
+&nbsp;<br>
+:states:&nbsp;The&nbsp;possible&nbsp;states.<br>
+:game_over:&nbsp;If&nbsp;the&nbsp;game&nbsp;has&nbsp;end.</tt></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>

@@ -14,60 +14,55 @@ class Replay(object):
         self.memory = list()
         self.discount = discount
 
-
-
-
-
-
-
     def remember(self, states, game_over):
-        #Save a state to memory
+        """Method to store the experiences in the class list.
+
+        :states: The possible states.
+        :game_over: If the game has end.
+        """
         self.memory.append([states, game_over])
-        #We don't want to store infinite memories, so if we have too many, we just delete the oldest one
+        # Remove oldest memory if list is full
         if len(self.memory) > self.max_memory:
             del self.memory[0]
 
-    def get_batch(self, model, batch_size=10):
+    def get_batch(self, model, batch_size=32):
+        """Interact to get the training data.
 
-        #How many experiences do we have?
+        :model: The NN to be trained.
+        :batch_size: Size of each training sample.
+        :returns: Training sample.
+
+        """
         len_memory = len(self.memory)
-
-        #Calculate the number of actions that can possibly be taken in the game
-        num_actions = model.output_shape[-1]
-
-        #Dimensions of the game field
+        # Number of possible actions in the game.
+        num_actions = model.outputshape[-1]
+        # Existent states (game field dimension).
         env_dim = self.memory[0][0][0].shape[1]
-
         #We want to return an input and target vector with inputs from an observed state...
         inputs = np.zeros((min(len_memory, batch_size), env_dim))
-
         #...and the target r + gamma * max Q(s',a')
         #Note that our target is a matrix, with possible fields not only for the action taken but also
         #for the other possible actions. The actions not take the same value as the prediction to not affect them
         targets = np.zeros((inputs.shape[0], num_actions))
-
         #We draw states to learn from randomly
         for i, idx in enumerate(np.random.randint(0, len_memory,
                                                   size=inputs.shape[0])):
             """
             Here we load one transition <s, a, r, s'> from memory
-            state_t: initial state s
-            action_t: action taken a
-            reward_t: reward earned r
-            state_tp1: the state that followed s'
+
+            :state_t: initial state s
+            :action_t: action taken a
+            :reward_t: reward earned r
+            :state_tp1: the state that followed s'
             """
             state_t, action_t, reward_t, state_tp1 = self.memory[idx][0]
-
             #We also need to know whether the game ended at this state
             game_over = self.memory[idx][1]
-
             #add the state s to the input
             inputs[i:i+1] = state_t
-
             # First we fill the target values with the predictions of the model.
             # They will not be affected by training (since the training loss for them is 0)
             targets[i] = model.predict(state_t)[0]
-
             """
             If the game ended, the expected reward Q(s,a) should be the final reward r.
             Otherwise the target value is r + gamma * max Q(s',a')
