@@ -1,0 +1,58 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module memory</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>memory</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/jader/Projects/git/optionsGame/src/memory.py">/home/jader/Projects/git/optionsGame/src/memory.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="memory.html#Replay">Replay</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Replay">class <strong>Replay</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>For&nbsp;RL&nbsp;a&nbsp;memory&nbsp;of&nbsp;experiences&nbsp;must&nbsp;be&nbsp;written&nbsp;to&nbsp;train&nbsp;the&nbsp;batches<br>
+with&nbsp;old&nbsp;experiences&nbsp;and&nbsp;returns&nbsp;in&nbsp;the&nbsp;form&nbsp;of&nbsp;(s,&nbsp;a,&nbsp;r,&nbsp;s').<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Replay-__init__"><strong>__init__</strong></a>(self, max_memory<font color="#909090">=100</font>, discount<font color="#909090">=0.9</font>)</dt><dd><tt>TODO:&nbsp;Docstring&nbsp;for&nbsp;__init__.<br>
+&nbsp;<br>
+:max_memory:&nbsp;The&nbsp;size&nbsp;of&nbsp;the&nbsp;memory&nbsp;container&nbsp;to&nbsp;avoid&nbsp;overflows.<br>
+:discount:&nbsp;The&nbsp;penalty&nbsp;factor&nbsp;for&nbsp;future&nbsp;experiences.</tt></dd></dl>
+
+<dl><dt><a name="Replay-get_batch"><strong>get_batch</strong></a>(self, model, batch_size<font color="#909090">=10</font>)</dt></dl>
+
+<dl><dt><a name="Replay-remember"><strong>remember</strong></a>(self, states, game_over)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
